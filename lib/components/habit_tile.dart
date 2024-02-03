@@ -16,7 +16,7 @@ class HabitTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Container(
-        padding: EdgeInsets.all(24),
+        padding: const EdgeInsets.all(24),
         decoration: BoxDecoration(
             color: Colors.grey[100], borderRadius: BorderRadius.circular(12)),
         child: Row(
