@@ -20,10 +20,13 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  void createNewHabit() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey[300],
+        floatingActionButton: MyFloatingActionButton(),
         body: ListView.builder(
             itemCount: todayHabitList.length,
             itemBuilder: (context, index) {
