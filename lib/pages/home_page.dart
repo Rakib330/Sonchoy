@@ -31,6 +31,7 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       db.todayHabitList[index][1] = value!;
     });
+    db.updateDatabase();
   }
 
   final _newHabitNameController = TextEditingController();
@@ -54,6 +55,7 @@ class _HomePageState extends State<HomePage> {
 
     _newHabitNameController.clear();
     Navigator.of(context).pop();
+    db.updateDatabase();
   }
 
   void cancleDialogBox() {
@@ -79,12 +81,14 @@ class _HomePageState extends State<HomePage> {
     });
     _newHabitNameController.clear();
     Navigator.pop(context);
+    db.updateDatabase();
   }
 
   void deleteHabit(int index) {
     setState(() {
       db.todayHabitList.removeAt(index);
     });
+    db.updateDatabase();
   }
 
   @override
